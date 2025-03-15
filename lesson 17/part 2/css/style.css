@@ -1,0 +1,59 @@
+:root{
+    --primary-color: #06206a;
+    --secondary-color: #fff;
+    --padding: 20px;
+}
+
+h1{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: var(--padding);
+}
+p{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: var(--padding);
+}
+#example-one{
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: #BADA55;
+}
+#example-two{
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    border: 3px solid #BADA55;
+}
+#example-three{
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    border: 3px solid #BADA55;
+    background-image: url(https://cdn.pixabay.com/photo/2021/09/16/08/56/leaves-6629581_640.png);
+}
+#example-four{
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px 70px 5px; 
+    background-color: #BADA55;
+}
+#example-five{
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px/30px;
+    background-color: #BADA55;
+}
+#example-six{
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 30px/30px;
+    background-color: #BADA55;
+}
