@@ -1,0 +1,21 @@
+.header{
+    background-color: rgb(136,84,156);
+    display: block;
+    width: 100%;
+    padding: 100px;
+}
+.logo{
+    margin-left:  100px;
+    padding: 30px;
+}
+.links div{
+    background-color: rgb(136,84,156);
+    justify-content: space-around;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    float: right;
+
+   
+}
+
