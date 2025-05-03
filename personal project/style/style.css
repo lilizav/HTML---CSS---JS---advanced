@@ -4,41 +4,61 @@ body{
     background-color: #f4f4f4;
     color: #333;
 }
-header{
-    background-color: #2b1111;
-    color: rgb(236, 236, 236);
-    padding: 20px 0;
-    text-align: center;
-}
-header .logo h1{
-    margin-bottom: 10px;
-    font-size: 36px;
-}
-header nav ul{
-    display: inline;
-    margin: 0 15px;
-}
-header nav ul li a{
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 20px;
-}
-header nav ul li a:hover {
-    text-decoration: underline;
+/* General reset for the header */
+header {
+    display: flex;
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Vertically align items */
+    padding: 20px 40px;
+    background-color: #360c0c; /* Set a background color */
+    color: white;
 }
 
-.hero{
+/* Styling for the logo */
+.logo h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Styling for the navigation */
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px; /* Add spacing between links */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db; /* Change color on hover */
+}
+
+
+.home{
     background: url('https://www.shutterstock.com/image-photo/online-library-modern-laptop-on-260nw-2123264996.jpg') repeat center ;
-    color: rgb(0, 0, 0);
+    color:rgb(194, 25, 25);
+    
     padding: 80px 0;
     text-align: center;
 }
 
-.hero-content h2{
+.home-content h2{
     font-size: 48px;
     font-weight: 700;
+    color: rgb(172, 25, 25);
+    background-color: #000000;
 }
-.hero-content p{
+.home-content p{
     font-size: 24px;
     font-weight: 750;
 }
@@ -64,6 +84,7 @@ header nav ul li a:hover {
 .shop h2{
     font-size: 36px;
     margin-bottom: 30px;
+    color: black;
 }
 .book-list{
     display: flex;
@@ -107,6 +128,146 @@ header nav ul li a:hover {
     background-color: #331212;
 }
 
+#rate-books {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+}
+
+.rate-books-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+select {
+    font-size: 1.1em;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="radio"] {
+    margin: 5px;
+}
+
+button[type="submit"] {
+    background-color: #3d1212;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #000000;
+}
+
+#feedback {
+    background-color: #fff;
+    padding: 50px 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.feedback-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #381010;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #000000;
+}
+
 .about{
     background-color: #fff;
     padding: 40px 20px;
@@ -115,19 +276,25 @@ header nav ul li a:hover {
 .about h2{
     font-size: 36px;
     margin-bottom: 20px;
+    color: #000000;
 }
-
+.about p{
+padding: 30px;
+font-size: 15px;
+}
 .contact{
     background-color: #f4f4f4;
     padding: 40px 20px;
     text-align: center;
+  
 }
 .contact h2{
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
+    color: black;
 }
 .contact p{
-    font-size: 18px;
+    font-size: 20px;
 }
 
 footer{
@@ -137,3 +304,4 @@ footer{
     padding: 20px;
     margin-top: 40px;
 }
+

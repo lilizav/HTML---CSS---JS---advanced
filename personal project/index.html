@@ -19,9 +19,10 @@
             </ul>
         </nav>
     </header>
+    
 
-    <section id="home" class="hero">
-        <div class="hero-content">
+    <section id="home" class="home">
+        <div class="home-content">
             <h2>Your One-Stop Online Bookstore</h2>
             <p>Discover and Buy Your Favorite Books</p>
             <a href="#shop" class="cta-button">Shop Now</a>
@@ -42,25 +43,139 @@
                 <img src="https://static.wixstatic.com/media/a48dbc_9dd626ced0974dcb9ce4eef8b9d5e798~mv2.jpg/v1/fill/w_568,h_838,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a48dbc_9dd626ced0974dcb9ce4eef8b9d5e798~mv2.jpg">
                 <h3>Malësorja</h3>
                 <p>Author: Nazmi Rrahmani</p>
+                <br>
                 <p class="price">$14.99</p>
                 <a href="#" class="buy-button">Buy Now</a>
             </div>
             <div class="book-item">
                 <img src="https://kolahduksia.com/wp-content/uploads/2019/03/Alkemisti-10.10.2017.jpg">
                 <h3>The Alchemist</h3>
-                <p>Author: Paulo Coehlo </p>
+                <p>Author: Paulo Coelho </p>
+                <br>
+                <br>
                 <p class="price">$24.99</p>
                 <a href="#" class="buy-button">Buy Now</a>
             </div>
-
+            <div class="book-item">
+                    <img src="https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/4dfd4da33_69022.jpg">
+                    <h3>Norwegian Wood</h3>
+                    <p>Author: Haruki Murakami </p>
+                    <p class="price">$19.99</p>
+                    <a href="#" class="buy-button">Buy Now</a>
+                </div>
+                <div class="book-item">
+                        <img src="https://m.media-amazon.com/images/I/71X73uwgd1L.jpg">
+                        <h3>The Trial</h3>
+                        <p>Author: Franz Kafka </p>
+                        <br>
+                        <br>
+                        <p class="price">$16.99</p>
+                        <a href="#" class="buy-button">Buy Now</a>
+                    </div>
+                
+                    <div class="book-item">
+                        <img src="https://www.accartbooks.com/app/uploads/books/9780789214478-04-1-600x900.jpg">
+                        <h3>Litle Women</h3>
+                        <p>Author: Louisa May Alcott </p>
+                        <br>
+                        <p class="price">$14.99</p>
+                        <a href="#" class="buy-button">Buy Now</a>
+                    </div>
+                    
+                    <div class="book-item">
+                        <img src="https://miro.medium.com/v2/resize:fit:736/1*AM2iIkxmOlgyxZ9BBHYrJQ.jpeg">
+                        <h3>The Metamorphosis</h3>
+                        <p>Author: Franz Kafka </p>
+                        <br>
+                        <p class="price">$19.99</p>
+                        <a href="#" class="buy-button">Buy Now</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </section>
 
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>We are an online bookstore dedicated to offering a wide variety of books for every reader. From fiction to non-fiction, we have something for everyone!</p>
+    <section id="rate-books" class="rate-books">
+        <div class="rate-books-container">
+            <h2>Rate Our Books</h2>
+            <p>We value your feedback! Select a book from the list below and rate it based on your experience.</p>
+    
+          
+            <form action="#" method="POST">
+                <label for="book-selection">Select a Book to Rate:</label>
+                <select id="book-selection" name="book-selection">
+                    <option value="book1">Crime and Punishment</option>
+                    <option value="book2">The Trial</option>
+                    <option value="book3">The Alchemist</option>
+                    <option value="book3">Malësorja</option>
+                    <option value="book3">The Metamorphosis</option>
+                    <option value="book3">Little Women</option>
+                    <option value="book3">Norwegian Wood</option>
+                    
+                </select>
+    
+                <p>Rate this book:</p>
+                <label for="rating1">1 Star</label>
+                <input type="radio" id="rating1" name="rating" value="1">
+                
+                <label for="rating2">2 Stars</label>
+                <input type="radio" id="rating2" name="rating" value="2">
+                
+                <label for="rating3">3 Stars</label>
+                <input type="radio" id="rating3" name="rating" value="3">
+                
+                <label for="rating4">4 Stars</label>
+                <input type="radio" id="rating4" name="rating" value="4">
+                
+                <label for="rating5">5 Stars</label>
+                <input type="radio" id="rating5" name="rating" value="5">
+                
+                <br />
+                <button type="submit">Submit Rating</button>
+            </form>
+        </div>
     </section>
+    <section id="feedback" class="feedback">
+        <div class="feedback-container">
+            <h2>We Value Your Feedback</h2>
+            <p>Do you have a book you’d like to see in our collection? Or do you have general feedback for us? Let us know!</p>
+            
+          
+            <form action="#" method="POST">
+                <label for="name">Your Name (Optional):</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+                
+                <label for="email">Your Email (Optional):</label>
+                <input type="email" id="email" name="email" placeholder="Your Email">
+                
+                <label for="feedback">Your Feedback or Book Suggestion:</label>
+                <textarea id="feedback" name="feedback" rows="5" placeholder="Please share your thoughts..."></textarea>
+    
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+    
+    <section id="about" class="about" style="padding: 20px; font-size: 14px;">
+        <div class="about-container" style="max-width: 800px; margin: 0 auto;">
+            <h2 style="font-size: 1.5em;">About Us</h2>
+            <p style="line-height: 1.4;">Welcome to our online bookstore! We are dedicated to offering a vast collection of books for every reader. Whether you're into fiction, non-fiction, or niche genres, we have something for everyone!</p>
+    
+            <div class="section-content">
+                <h3 style="font-size: 1.2em; margin-top: 10px;">Our Collection</h3>
+                <p style="line-height: 1.4;">Our bookstore offers a wide range of genres, from bestsellers to hidden gems. Whether you're a fan of mystery, romance, fantasy, or historical fiction, you'll find something to captivate your imagination. We also provide self-help, educational books, and more to support lifelong learning.</p>
+            </div>
+    
+            <div class="section-content">
+                <h3 style="font-size: 1.2em; margin-top: 10px;">Customer Experience</h3>
+                <p style="line-height: 1.4;">We take pride in offering exceptional customer service. Our team is passionate about books and strives to ensure that every order is handled with care. We also offer personalized book recommendations based on your preferences and reading history.</p>
+            </div>
+    
+            <p style="line-height: 1.4;">Thank you for choosing us as your go-to bookstore. We’re thrilled to be part of your literary journey!</p>
+        </div>
+    </section>
+    
 
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
