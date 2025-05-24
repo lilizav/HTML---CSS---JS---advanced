@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lost & Found of the Internet</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="js/script.js">
+</head>
+<body>
+
+<header>
+  <h1>Lost & Found of the Internet</h1>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#submit">Submit Lost Content</a></li>
+      <li><a href="#archive">Archive</a></li>
+      <li><a href="#memory">Memory Threads</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<nav>
+  <div class="nav-profile">
+    <img src="avatars/currentUser.png" alt="Profile" class="avatar-small" />
+  </div>
+</nav>
+
+
+<section class="hero" aria-label="Introduction">
+  <h2>Rediscover the Lost Corners of the Web</h2>
+  <p>
+    The internet is vast and ever-changing. Websites, videos, memes, and forums disappear every day, leaving behind digital voids. Our mission is to help you recover and preserve these lost treasures.
+  </p>
+  <p>
+    Join our community of digital archaeologists, historians, and nostalgic explorers to piece together vanished web history and share your memories.
+  </p>
+  <button onclick="document.getElementById('submit').scrollIntoView({behavior:'smooth'})">Get Started: Submit Lost Content</button>
+</section>
+
+<main>
+
+  <section id="about" aria-label="About Lost & Found of the Internet">
+    <h3>About Us</h3>
+    <p>
+      Lost & Found of the Internet is a community-driven platform dedicated to discovering, archiving, and sharing internet content that has been lost or forgotten. We believe every meme, forum post, website, and video tells a story worth preserving.
+    </p>
+    <p>
+      While tools like the Wayback Machine help preserve web snapshots, they often miss vast swaths of content and lack context. Our project blends archival technology with personal memories, collaborative restoration, and storytelling.
+    </p>
+  </section>
+
+  <section id="submit" aria-label="Submit Lost Content">
+    <h3>Submit Lost Content</h3>
+    <p>
+      Help us grow the archive by submitting details about internet content you remember but can no longer find. The more detail you provide, the easier it is to recover or reconstruct it.
+    </p>
+    <form id="lostForm" novalidate>
+      <fieldset>
+        <legend>Content Information</legend>
+        <label for="title">Title / Name of Content*:</label>
+        <input type="text" id="title" name="title" required placeholder="e.g., Old Meme 'Distracted Boyfriend' Variant" />
+
+        <label for="url">Original URL (if known):</label>
+        <input type="url" id="url" name="url" placeholder="https://example.com/page" />
+
+        <label for="category">Category*:</label>
+        <select id="category" name="category" required>
+          <option value="" disabled selected>Select one</option>
+          <option value="Website">Website</option>
+          <option value="Meme">Meme</option>
+          <option value="Video">Video</option>
+          <option value="Forum">Forum</option>
+          <option value="Digital Art">Digital Art</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="dateLost">Approximate Date Lost (if known):</label>
+        <input type="date" id="dateLost" name="dateLost" />
+
+        <label for="tags">Tags / Keywords:</label>
+        <input type="text" id="tags" name="tags" placeholder="e.g., 2015, meme, viral" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Description & Memories</legend>
+        <label for="description">Description / Memories*:</label>
+        <textarea id="description" name="description" required placeholder="Describe what you remember about this content, why it was important to you, or any details that might help find it..."></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Contact (optional)</legend>
+        <label for="contactEmail">Email (for follow-up):</label>
+        <input type="email" id="contactEmail" name="contactEmail" placeholder="your.email@example.com" />
+      </fieldset>
+
+      <button type="submit">Submit Lost Content</button>
+    </form>
+    <p id="formMessage" aria-live="polite"></p>
+  </section>
+
+ <label class="theme-toggle" for="darkModeToggle">
+  <input type="checkbox" id="darkModeToggle" />
+  <span class="slider"></span>
+</label>
+
+
+  <div class="filter-tags">
+  <button class="tag active">All</button>
+  <button class="tag">Planned</button>
+  <button class="tag">In Progress</button>
+  <button class="tag">Completed</button>
+</div>
+
+  <section id="archive" aria-label="Archive of Lost Content">
+    <h3>Archive</h3>
+    <p>
+      Browse our growing collection of lost internet content submissions and reconstructions. Use the search box to find specific items by keyword, category, or date.
+    </p>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search archive..." aria-label="Search archive" />
+    </div>
+
+    <div class="archive-list" id="archiveList">
+      <article class="archive-item">
+        <h4>Vanished Meme: "Old Distracted Boyfriend"</h4>
+        <p><strong>Category:</strong> Meme</p>
+        <p>A rare variant of the famous meme that disappeared after copyright issues.</p>
+        <p><a href="https://example.com/distracted-boyfriend" target="_blank" rel="noopener">Original Link</a></p>
+      </article>
+
+      <article class="archive-item">
+        <h4>Retro Gaming Forum 2005</h4>
+        <p><strong>Category:</strong> Forum</p>
+        <p>An old forum where gamers shared tips on vintage consoles. Shut down in 2010.</p>
+      </article>
+
+      <article class="archive-item">
+        <h4>Lost Video: "Dancing Cat 2012"</h4>
+        <p><strong>Category:</strong> Video</p>
+        <p>A viral video of a cat dancing to pop music, deleted from all platforms.</p>
+        <p><a href="https://example.com/dancing-cat" target="_blank" rel="noopener">Original Link</a></p>
+      </article>
+
+      <article class="archive-item">
+        <h4>Digital Art Collection by PixelPainter</h4>
+        <p><strong>Category:</strong> Digital Art</p>
+        <p>An offline collection of pixel art lost in a server crash.</p>
+      </article>
+
+        <div class="archive-item">
+    <h4><span class="status-icon planned">📅</span> Redesign Landing Page</h4>
+    <p>Scheduled for next sprint release and pending asset approval.</p>
+  </div>
+  <div class="archive-item">
+    <h4><span class="status-icon in-progress">⚙️</span> Feature: User Profiles</h4>
+    <p>Currently in development, expected to finish by end of month.</p>
+  </div>
+  <div class="archive-item">
+    <h4><span class="status-icon completed">✅</span> Newsletter System</h4>
+    <p>Fully deployed with success tracking enabled.</p>
+  </div>
+    </div>
+  </section>
+
+<section id="projects" aria-label="Ongoing Recovery Projects">
+  <h3>Ongoing Recovery Projects</h3>
+  <p>Explore active community missions to find and restore missing internet media, websites, and experiences.</p>
+  <div class="project-list">
+    <article class="project">
+      <h4>🎵 Project: Dancing Hamster Animations</h4>
+      <p>We’re searching for all variants of the classic 2000s HamsterDance Flash animations. Looking for SWF files, remixes, or screenshots of fan versions.</p>
+      <p><strong>Status:</strong> 60% recovered • <a href="#submit">Submit info</a> or <a href="#">join the thread</a></p>
+    </article>
+    <article class="project">
+      <h4>🕹️ Project: AMV Haven Archive (2003)</h4>
+      <p>This beloved anime music video portal disappeared with no backups. We're collecting titles, creator names, and clips from former users.</p>
+      <p><strong>Status:</strong> Leads found • <a href="#submit">Contribute a memory</a></p>
+    </article>
+    <article class="project">
+      <h4>📼 Project: Vine Compilation "Dance Fails 2014"</h4>
+      <p>This viral compilation was deleted after Vine’s shutdown. We’re hunting fragments from old YouTube reuploads or Reddit mentions.</p>
+      <p><strong>Status:</strong> Partial recovery in progress</p>
+    </article>
+  </div>
+</section>
+<section id="contributors" aria-label="Top Community Contributors">
+  <h3>Top Contributors</h3>
+  <p>Our archive is made possible by passionate users helping preserve the past. Here's a spotlight on our most active members:</p>
+ <ul>
+  <li>
+    <img src="https://static.vecteezy.com/system/resources/previews/060/513/045/non_2x/pixel-art-character-portrait-of-young-girl-in-blue-hoodie-with-brown-hair-vector.jpg" alt="User123 avatar" class="avatar" />
+    <strong>User123</strong> — 18 submissions, 6 verified recoveries, forum moderator
+  </li>
+  <li>
+    <img src="https://static.vecteezy.com/system/resources/previews/060/515/375/non_2x/cute-pixel-art-character-with-blue-hair-and-green-shirt-in-8-bit-style-vector.jpg" alt="RetroFan avatar" class="avatar" />
+    <strong>RetroFan</strong> — 12 memory threads, early web GIF collection contributor
+  </li>
+  <li>
+    <img src="https://static.vecteezy.com/system/resources/previews/060/126/977/non_2x/pixel-art-male-character-portrait-with-brown-hair-and-blue-hoodie-facing-forward-vector.jpg" alt="MemeMiner avatar" class="avatar" />
+    <strong>MemeMiner</strong> — Discovered 9 rare meme variants with metadata
+  </li>
+  <li>
+    <img src="https://static.vecteezy.com/system/resources/previews/060/512/966/non_2x/pixel-art-portrait-of-woman-with-brown-wavy-hair-and-blue-eyes-in-retro-style-vector.jpg" alt="ArchiveAngel avatar" class="avatar" />
+    <strong>ArchiveAngel</strong> — Built tools to extract SWFs from Wayback Machine snapshots
+  </li>
+</ul>
+
+  <p><a href="#submit">Start contributing</a> to be featured here!</p>
+</section> 
+
+<section id="graveyard" aria-label="Digital Graveyard">
+  <h3>🪦 Digital Graveyard</h3>
+  <p>A quiet space honoring lost internet content that may never return — but lives on in memory.</p>
+  <article>
+    <h4>GeoCities Shrine: CatFan1999</h4>
+    <p>“It had glittery gifs, Sailor Moon shrines, and a ‘Meow Counter.’ Deleted in Yahoo’s 2009 purge.”</p>
+  </article>
+  <article>
+    <h4>Blog: ThoughtsOnTech (2006–2012)</h4>
+    <p>Once a leading voice in the indie web, this blog vanished with its hosting. We're collecting screenshots and reader essays.</p>
+  </article>
+  <article>
+    <h4>Game Guide Forum: Tips4Games</h4>
+    <p>Thousands of cheat codes and walkthroughs gone after the domain expired. We preserve what we can through user memories.</p>
+  </article>
+</section>
+
+<section id="toolbox" aria-label="Tools for Digital Recovery">
+  <h3>🧰 Recovery Toolbox</h3>
+  <p>Use these tools and resources to recover lost content or contribute to community efforts:</p>
+  <ul>
+    <li><a href="https://waybackpack.com" target="_blank" rel="noopener">Waybackpack</a> — Download entire domains from the Wayback Machine</li>
+    <li><a href="https://archivebox.io" target="_blank" rel="noopener">ArchiveBox</a> — Self-hosted archiving solution</li>
+    <li><a href="https://github.com/ytdl-org/youtube-dl" target="_blank" rel="noopener">youtube-dl</a> — Download videos before they vanish</li>
+    <li><a href="https://redd.it/r/tipofmyjoystick" target="_blank" rel="noopener">TipOfMyJoystick (Reddit)</a> — Crowdsource forgotten games</li>
+    <li><a href="https://webrecorder.io" target="_blank" rel="noopener">Webrecorder</a> — Create high-fidelity web page archives</li>
+    <li><a href="https://r/DataHoarder" target="_blank" rel="noopener">Reddit: DataHoarder</a> — Discussions, tools, and techniques for digital preservation</li>
+  </ul>
+</section>
+
+<section id="success" aria-label="Success Stories">
+  <h3>🌟 Success Stories</h3>
+  <p>Every piece found is a celebration of what community, memory, and technology can do together.</p>
+  <article>
+    <h4>🎉 The Return of HamsterDance</h4>
+    <p>We recovered the original Flash version and several remixes from 2001-2004 thanks to submissions from three users and archived .SWF files.</p>
+  </article>
+  <article>
+    <h4>📷 Resurrecting a Deleted Photo Blog</h4>
+    <p>A fan-favorite Tumblr photography blog from 2013 was brought back using screenshots and web archives. The creator even joined our Discord!</p>
+  </article>
+  <article>
+    <h4>🎬 Lost Vine Compilation Rebuilt</h4>
+    <p>After piecing together clips from old downloads, we reconstructed the full "Dance Fails 2014" video. Now preserved in our digital vault.</p>
+  </article>
+</section>
+
+
+
+
+  <section id="memory" aria-label="Memory Threads">
+    <h3>Memory Threads</h3>
+    <p>
+      Personal stories and reflections shared by community members about lost internet content.
+    </p>
+
+    <article class="thread">
+      <h4>Remembering the Old Forum of Retro Gaming</h4>
+      <p>“This forum was my refuge in middle school. We shared cheat codes, fan art, and made lifelong friends. It vanished overnight, and I still miss it.” — User123</p>
+    </article>
+
+    <article class="thread">
+      <h4>The Lost Viral Meme That Defined 2015</h4>
+      <p>“No one talks about it anymore, but that meme shaped a generation’s humor. I wish I had saved more copies.” — MemeFan</p>
+    </article>
+
+    <article class="thread">
+      <h4>Digital Art Lost in the Great Server Crash</h4>
+      <p>“Years of digital paintings disappeared when my favorite hosting site shut down. This platform gives hope that lost art can be found again.” — ArtistAnnie</p>
+    </article>
+
+    <article class="thread">
+      <h4>Old Blog Posts That Changed Perspectives</h4>
+      <p>“I used to read a series of blogs that inspired me deeply, but the sites all went offline. I hope someone can help find or archive those writings.” — ThoughtSeeker</p>
+    </article>
+  </section>
+
+  <section id="resources" aria-label="Resources for Digital Preservation">
+    <h3>Resources</h3>
+    <p>
+      Learn how to archive your own digital content and preserve internet history.
+    </p>
+    <ul>
+      <li><a href="https://archive.org/web/" target="_blank" rel="noopener">The Wayback Machine</a> — Archive web pages for future access</li>
+      <li><a href="https://webrecorder.io/" target="_blank" rel="noopener">Webrecorder</a> — Create high-fidelity web archives</li>
+      <li><a href="https://www.digitalpreservation.gov/" target="_blank" rel="noopener">Digital Preservation Coalition</a> — Resources & guides on digital archiving</li>
+      <li><a href="https://en.wikipedia.org/wiki/Digital_preservation" target="_blank" rel="noopener">Wikipedia: Digital Preservation</a></li>
+    </ul>
+  </section>
+
+  <section id="contact" aria-label="Contact Lost & Found of the Internet">
+    <h3>Contact Us</h3>
+    <p>Questions, feedback, or ideas? We'd love to hear from you!</p>
+    <form id="contactForm" novalidate>
+      <label for="contactName">Name:</label>
+      <input type="text" id="contactName" name="contactName" placeholder="Your name" />
+
+      <label for="contactEmail2">Email*:</label>
+      <input type="email" id="contactEmail2" name="contactEmail2" required placeholder="your.email@example.com" />
+
+      <label for="contactMessage">Message*:</label>
+      <textarea id="contactMessage" name="contactMessage" required placeholder="Write your message here..."></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="contactMessageStatus" aria-live="polite"></p>
+</section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Lost & Found of the Internet •</p>
+  <p>
+    Follow us: 
+    <a href="#" aria-label="Facebook">Facebook</a> | 
+    <a href="#" aria-label="Twitter">Twitter</a> | 
+    <a href="#" aria-label="Instagram">Instagram</a>
+  </p>
+</footer>
+
+</body>
+</html>
