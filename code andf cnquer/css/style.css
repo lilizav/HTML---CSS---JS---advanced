@@ -119,7 +119,7 @@ nav a:focus {
 }
 
 .hero button {
-  background-color: #ffcb05;
+  background-color:#f2b500;
   border: none;
   padding: 0.75rem 1.5rem;
   font-size: 1.1rem;
@@ -240,6 +240,32 @@ button[type="submit"]:focus {
   outline: none;
 }
 
+form button[type="reset"] {
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+
+
+form button[type="reset"]:hover {
+  background-color: #3f4bbf; 
+}
+
+form button[type="reset"] {
+  background-color: #a3a3a3; 
+}
+
+form button[type="reset"]:hover {
+  background-color: #7a7a7a;
+}
+
+
 .search-bar {
   margin-bottom: 1.5rem;
   text-align: center;
@@ -331,7 +357,6 @@ footer a:focus {
   outline: none;
 }
 
-/* Responsive */
 
 @media (min-width: 600px) {
   nav ul {
@@ -349,9 +374,7 @@ footer a:focus {
   }
 }
 
-/* New Section Styles */
 
-/* Generic section enhancements */
 .project-list, .toolbox ul, .contributors ul, .success-stories, .graveyard {
   display: grid;
   grid-template-columns: 1fr;
@@ -399,16 +422,16 @@ footer a:focus {
 #contributors li {
   display: flex;
   align-items: center;
-  gap: 0.6rem; /* space between avatar and text */
+  gap: 0.6rem; 
   margin-bottom: 0.8rem;
 }
 
 #contributors .avatar {
   width: 32px;
   height: 32px;
-  border-radius: 50%;  /* makes it circular */
-  object-fit: cover;   /* keeps the image aspect ratio and crops if needed */
-  flex-shrink: 0;      /* prevents shrinking */
+  border-radius: 50%;  
+  object-fit: cover;  
+  flex-shrink: 0;      
   box-shadow: 0 0 4px rgba(0,0,0,0.1);
 }
 
@@ -436,27 +459,26 @@ footer a:focus {
 .hero {
     position: relative;
     background-image: url('https://media.istockphoto.com/id/1494154765/photo/data-error-digital-glitch-color-noise-encryption.jpg?s=612x612&w=0&k=20&c=bpFM9RVnZnkCBSnbAOFaSR70omhA_J5rEs7CvbuFLk0=');
-    background-size: cover; /* Cover the entire section */
-    background-position: center; /* Center the image */
-    height: 400px; /* Set a height for the section */
-    color: white; /* Text color */
-    display: flex; /* Center content */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    text-align: center; /* Center text */
+    background-size: cover; 
+    background-position: center; 
+    height: 400px; 
+    color: white; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    text-align: center; 
 }
-
 .hero::before {
     content: "";
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-    z-index: 0; /* Behind the text */
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 0; 
 }
 
 .hero h2, .hero p, .hero button {
-    position: relative; /* Bring text above the overlay */
-    z-index: 1; /* Above the overlay */
+    position: relative; 
+    z-index: 1; 
 }
 
 
@@ -486,7 +508,6 @@ footer a:focus {
   font-size: 1rem;
 }
 
-/* Interactive link enhancements */
 .project a,
 #contributors a,
 #toolbox a,
@@ -503,54 +524,7 @@ footer a:focus {
   color: #155ab6;
 }
 
-/* Dark Mode Toggle */
-.theme-toggle {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 26px;
-}
 
-.theme-toggle input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.theme-toggle .slider {
-  position: absolute;
-  cursor: pointer;
-  background-color: #ccc;
-  border-radius: 34px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transition: 0.4s;
-}
-
-.theme-toggle .slider::before {
-  position: absolute;
-  content: "";
-  height: 20px;
-  width: 20px;
-  left: 3px;
-  bottom: 3px;
-  background-color: white;
-  border-radius: 50%;
-  transition: 0.4s;
-}
-
-.theme-toggle input:checked + .slider {
-  background-color: #2196f3;
-}
-
-.theme-toggle input:checked + .slider::before {
-  transform: translateX(24px);
-}
-
-
-/* Archive List with Status Icons */
 .archive-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -625,7 +599,6 @@ footer a:focus {
   outline: none;
 }
 
-/* Responsive grid columns for archive list */
 @media (min-width: 600px) {
   .archive-list {
     grid-template-columns: repeat(2, 1fr);
@@ -647,3 +620,241 @@ textarea {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
+#scrollTopBtn {
+  display: none; 
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f2b500;       
+  color: #f0f0f0;                  
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+#scrollTopBtn:hover {
+  background-color: #494848;
+  transform: translateY(-2px);
+}
+
+
+#progressBarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #eee;
+  z-index: 1000;
+}
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #f2b500;
+  transition: width 0.2s ease;
+}
+
+  .like-btn, .bookmark-btn, #randomMemoryBtn, #copyEmailBtn {
+    background: #5e5959;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .like-btn:hover, .bookmark-btn:hover, #randomMemoryBtn:hover {
+    background-color: #000000;
+  }
+  .like-count {
+    font-weight: bold;
+    margin-left: 5px;
+  }
+
+
+  #sharePageBtn {
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+
+}
+
+#sharePageBtn:hover {
+  background-color: #555;
+}
+
+
+.comments-section.tiny {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  padding: 0.4rem;
+  background: #f4f4f4;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.comments-section.tiny h6 {
+  margin: 0 0 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.comments-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.4rem;
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+.comments-list li {
+  background: #fff;
+  margin-bottom: 0.2rem;
+  padding: 0.3rem;
+  border-radius: 3px;
+  font-size: 0.72rem;
+  border: 1px solid #eee;
+}
+
+.comment-form {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.comment-form input {
+  flex: 1;
+  font-size: 0.72rem;
+  padding: 0.25rem 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.comment-form button {
+  font-size: 0.72rem;
+  padding: 0.25rem 0.5rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  background: #555;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px 0 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px 0 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.matches-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.matches-list li {
+  background: #e7f3ff;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.matches-list li .score {
+  font-weight: bold;
+  color: #007bff;
+}
+
+
+#formMessage {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}

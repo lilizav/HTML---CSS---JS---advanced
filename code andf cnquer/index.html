@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lost & Found of the Internet</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="js/script.js">
+  <script src="js/script.js" defer></script>
+
 </head>
 <body>
 
@@ -23,11 +24,11 @@
   </nav>
 </header>
 
-<nav>
-  <div class="nav-profile">
-    <img src="avatars/currentUser.png" alt="Profile" class="avatar-small" />
-  </div>
-</nav>
+<div id="progressBarContainer">
+  <div id="progressBar"></div>
+</div>
+
+
 
 
 <section class="hero" aria-label="Introduction">
@@ -97,15 +98,34 @@
         <input type="email" id="contactEmail" name="contactEmail" placeholder="your.email@example.com" />
       </fieldset>
 
+
+
       <button type="submit">Submit Lost Content</button>
+      <button type="reset">Reset</button>
+
+
+
     </form>
     <p id="formMessage" aria-live="polite"></p>
   </section>
 
- <label class="theme-toggle" for="darkModeToggle">
-  <input type="checkbox" id="darkModeToggle" />
-  <span class="slider"></span>
-</label>
+
+ <div class="container">
+    <h1>Lost Media Smart Matcher</h1>
+
+    <label for="cluesInput">Enter found clues (comma separated):</label>
+    <input type="text" id="cluesInput" placeholder="e.g. cat, dancing, viral" />
+
+    <button id="matchBtn">Find Matches</button>
+
+    <h2>Matches:</h2>
+    <ul id="matchesList" class="matches-list"></ul>
+  </div>
+
+
+
+<button id="scrollTopBtn" style="display:none; position:fixed; bottom:20px; right:20px;">⬆️ Top</button>
+
 
 
   <div class="filter-tags">
@@ -114,6 +134,8 @@
   <button class="tag">In Progress</button>
   <button class="tag">Completed</button>
 </div>
+
+
 
   <section id="archive" aria-label="Archive of Lost Content">
     <h3>Archive</h3>
@@ -131,39 +153,169 @@
         <p><strong>Category:</strong> Meme</p>
         <p>A rare variant of the famous meme that disappeared after copyright issues.</p>
         <p><a href="https://example.com/distracted-boyfriend" target="_blank" rel="noopener">Original Link</a></p>
+       <button class="like-btn">❤️ Like <span class="like-count">3220</span></button>
+       <button class="bookmark-btn">🔖 Save</button>
+       <div class="match-suggestions">
+  <h5>🔍 Related Clues</h5>
+  <ul class="related-list"></ul>
+</div>
+
       </article>
+
+     <div class="comments-section tiny">
+  <h6>💬 Comments</h6>
+  <ul class="comments-list"></ul>
+  <form class="comment-form">
+    <input type="text" placeholder="Add comment..." required />
+    <button type="submit">➤</button>
+  </form>
+</div>
+
+
+
 
       <article class="archive-item">
         <h4>Retro Gaming Forum 2005</h4>
         <p><strong>Category:</strong> Forum</p>
         <p>An old forum where gamers shared tips on vintage consoles. Shut down in 2010.</p>
+         <button class="like-btn">❤️ Like <span class="like-count">7450</span></button>
+         <button class="bookmark-btn">🔖 Save</button>
+         <div class="match-suggestions">
+  <h5>🔍 Related Clues</h5>
+  <ul class="related-list"></ul>
+</div>
+
       </article>
+
+      
+      <div class="comments-section tiny">
+  <h6>💬 Comments</h6>
+  <ul class="comments-list"></ul>
+  <form class="comment-form">
+    <input type="text" placeholder="Add comment..." required />
+    <button type="submit">➤</button>
+  </form>
+</div>
+
 
       <article class="archive-item">
         <h4>Lost Video: "Dancing Cat 2012"</h4>
         <p><strong>Category:</strong> Video</p>
         <p>A viral video of a cat dancing to pop music, deleted from all platforms.</p>
         <p><a href="https://example.com/dancing-cat" target="_blank" rel="noopener">Original Link</a></p>
+         <button class="like-btn">❤️ Like <span class="like-count">12100</span></button>
+         <button class="bookmark-btn">🔖 Save</button>
+         <div class="match-suggestions">
+  <h5>🔍 Related Clues</h5>
+  <ul class="related-list"></ul>
+</div>
+
       </article>
+
+      
+     <div class="comments-section tiny">
+  <h6>💬 Comments</h6>
+  <ul class="comments-list"></ul>
+  <form class="comment-form">
+    <input type="text" placeholder="Add comment..." required />
+    <button type="submit">➤</button>
+  </form>
+</div>
+
 
       <article class="archive-item">
         <h4>Digital Art Collection by PixelPainter</h4>
         <p><strong>Category:</strong> Digital Art</p>
         <p>An offline collection of pixel art lost in a server crash.</p>
+         <button class="like-btn">❤️ Like <span class="like-count">1300</span></button>
+         <button class="bookmark-btn">🔖 Save</button>
+         <div class="match-suggestions">
+  <h5>🔍 Related Clues</h5>
+  <ul class="related-list"></ul>
+</div>
+
       </article>
+
+      
+      <div class="comments-section tiny">
+  <h6>💬 Comments</h6>
+  <ul class="comments-list"></ul>
+  <form class="comment-form">
+    <input type="text" placeholder="Add comment..." required />
+    <button type="submit">➤</button>
+  </form>
+</div>
+
 
         <div class="archive-item">
     <h4><span class="status-icon planned">📅</span> Redesign Landing Page</h4>
     <p>Scheduled for next sprint release and pending asset approval.</p>
+     <button class="like-btn">❤️ Like <span class="like-count">4567</span></button>
+     <button class="bookmark-btn">🔖 Save</button>
+     <div class="match-suggestions">
+  <h5>🔍 Related Clues</h5>
+  <ul class="related-list"></ul>
+</div>
+
   </div>
+
+  
+      <div class="comments-section tiny">
+  <h6>💬 Comments</h6>
+  <ul class="comments-list"></ul>
+  <form class="comment-form">
+    <input type="text" placeholder="Add comment..." required />
+    <button type="submit">➤</button>
+  </form>
+</div>
+
+
   <div class="archive-item">
     <h4><span class="status-icon in-progress">⚙️</span> Feature: User Profiles</h4>
     <p>Currently in development, expected to finish by end of month.</p>
+     <button class="like-btn">❤️ Like <span class="like-count">2590</span></button>
+     <button class="bookmark-btn">🔖 Save</button>
+     <div class="match-suggestions">
+  <h5>🔍 Related Clues</h5>
+  <ul class="related-list"></ul>
+</div>
+
   </div>
+
+  
+     <div class="comments-section tiny">
+  <h6>💬 Comments</h6>
+  <ul class="comments-list"></ul>
+  <form class="comment-form">
+    <input type="text" placeholder="Add comment..." required />
+    <button type="submit">➤</button>
+  </form>
+</div>
+
+
   <div class="archive-item">
     <h4><span class="status-icon completed">✅</span> Newsletter System</h4>
     <p>Fully deployed with success tracking enabled.</p>
+     <button class="like-btn">❤️ Like <span class="like-count">20470</span></button>
+     <button class="bookmark-btn">🔖 Save</button>
+     <div class="match-suggestions">
+  <h5>🔍 Related Clues</h5>
+  <ul class="related-list"></ul>
+</div>
+
   </div>
+
+  
+      <div class="comments-section tiny">
+  <h6>💬 Comments</h6>
+  <ul class="comments-list"></ul>
+  <form class="comment-form">
+    <input type="text" placeholder="Add comment..." required />
+    <button type="submit">➤</button>
+  </form>
+</div>
+
+
     </div>
   </section>
 
@@ -320,6 +472,8 @@
     </form>
     <p id="contactMessageStatus" aria-live="polite"></p>
 </section>
+
+<button id="sharePageBtn">Share This Page</button>
 
 </main>
 
