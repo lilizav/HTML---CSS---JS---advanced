@@ -105,40 +105,6 @@ function formatLikes(num) {
 }
 
 
-
-
-  const tags = document.querySelectorAll('.filter-tags .tag');
-
-  
-  lostForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    formMessage.textContent = '';
-    formMessage.style.color = '';
-
-    if (!lostForm.title.value.trim()) {
-      formMessage.textContent = 'Please enter the Title / Name of Content.';
-      formMessage.style.color = 'red';
-      lostForm.title.focus();
-      return;
-    }
-    if (!lostForm.category.value) {
-      formMessage.textContent = 'Please select a Category.';
-      formMessage.style.color = 'red';
-      lostForm.category.focus();
-      return;
-    }
-    if (!lostForm.description.value.trim()) {
-      formMessage.textContent = 'Please enter a Description or Memories.';
-      formMessage.style.color = 'red';
-      lostForm.description.focus();
-      return;
-    }
-
-    formMessage.style.color = 'green';
-    formMessage.textContent = 'Thank you! Your submission has been received.';
-    lostForm.reset();
-  });
-
  
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -185,32 +151,6 @@ formFields.forEach(id => {
 });
 
 
- document.addEventListener('DOMContentLoaded', () => {
-    const lostForm = document.getElementById('lostForm');
-    const formMessage = document.getElementById('formMessage');
-
-    lostForm.addEventListener('submit', (e) => {
-      e.preventDefault(); // Stop default form behavior
-
-      // Basic required field check
-      const title = lostForm.querySelector('#title').value.trim();
-      const category = lostForm.querySelector('#category').value;
-      const description = lostForm.querySelector('#description').value.trim();
-
-      if (!title || !category || !description) {
-        formMessage.textContent = '❌ Please fill out all required fields.';
-        formMessage.style.color = 'red';
-        return;
-      }
-
-      // Show confirmation message
-      formMessage.textContent = '✅ You have submitted lost content! Thank you.';
-      formMessage.style.color = 'green';
-
-      // Clear the form
-      lostForm.reset();
-    });
-  });
 
 
 const shareBtn = document.getElementById('sharePageBtn');
@@ -305,36 +245,12 @@ matchBtn.addEventListener('click', () => {
     matchesList.appendChild(li);
   });
 });
-
-
-
-  tags.forEach(tag => {
-    tag.addEventListener('click', () => {
-      tags.forEach(t => t.classList.remove('active'));
-      tag.classList.add('active');
-
-      const filter = tag.textContent.toLowerCase();
-
-      archiveItems.forEach(item => {
-        const statusIcon = item.querySelector('.status-icon');
-        if (!statusIcon) {
-          item.style.display = '';
-          return;
-        }
-
-        const statusClass = statusIcon.classList.contains('planned') ? 'planned' :
-                            statusIcon.classList.contains('in-progress') ? 'in progress' :
-                            statusIcon.classList.contains('completed') ? 'completed' : '';
-
-        if (filter === 'all' || filter === statusClass) {
-          item.style.display = '';
-        } else {
-          item.style.display = 'none';
-        }
-      });
     });
-  });
-});
+
+
+  
+
+  
 
 
 
