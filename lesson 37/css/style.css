@@ -1,0 +1,119 @@
+/* ul#selected li {
+    background-color: lightgray;
+    margin-bottom: 15px;
+    padding: 20px;
+    color: white;
+    list-style-type: none;
+}
+ul#selected{
+    padding: 0px;
+}
+
+ul#select .ui-selecting{
+    background-color: #ffbe76;
+}
+
+ul#sort li{
+    background-color: #686de0;
+    margin-bottom: 15px;
+    padding: 15px;
+    color: white;
+    list-style-type: none;
+}   */
+ 
+
+
+
+
+
+
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Sortable List */
+#sort {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+#sort li {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #e9ecef;
+    border: 1px solid #ccc;
+    cursor: move;
+}
+
+/* Accordion */
+#accordion {
+    width: 500px;
+    margin-top: 40px;
+}
+
+#accordion h3 {
+    background-color: #007bff;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+#accordion div {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+/* Tabs */
+#tabs {
+    width: 500px;
+    margin-top: 40px;
+}
+
+#tabs ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    background-color: #e9ecef;
+}
+
+#tabs ul li {
+    margin: 0;
+}
+
+#tabs ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid transparent;
+    border-bottom: none;
+}
+
+#tabs ul li.ui-tabs-active a {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+
+#tabs > div {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: white;
+}
+
+
